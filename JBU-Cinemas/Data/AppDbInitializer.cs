@@ -65,67 +65,67 @@ namespace JBU_Cinemas.Data
                         {
                             FullName = "Tom Cruise",
                             Bio = "Thomas Cruise Mapother IV (born July 3, 1962), known professionally as Tom Cruise, is an American actor and producer.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Tom_Cruise#/media/File:Tom_Cruise_by_Gage_Skidmore_2.jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Actors/Tom_Cruise_by_Gage_Skidmore_2.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Miles Teller",
                             Bio = "Miles Teller (born February 20, 1987) is an American actor, known for his roles as jazz drummer Andrew Neiman in Whiplash and pilot Lt. Bradley Rooster Bradshaw in Top Gun: Maverick.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Miles_Teller#/media/File:Miles_Teller_Commanders_at_Eagles_NOV2022_(cropped).jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Actors/Miles_Teller.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Jennifer Connelly",
                             Bio = "Jennifer Lynn Connelly (born December 12, 1970) is an American actress. She began her career as a child model before making her acting debut in the 1984 crime film Once Upon a Time in America.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Jennifer_Connelly#/media/File:Jennifer_Connelly_2010_TIFF.jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Actors/Jennifer_Connelly.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Chris Pratt",
                             Bio = "Christopher Michael Pratt (born June 21, 1979) is an American actor. He rose to prominence for playing Andy Dwyer in the NBC sitcom Parks and Recreation (2009–2015).",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Chris_Pratt#/media/File:Chris_Pratt_2018.jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Actors/Chris_Pratt.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Bryce Dallas Howard",
                             Bio = "Bryce Dallas Howard (born March 2, 1981) is an American actress and director.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Bryce_Dallas_Howard#/media/File:Bryce_Dallas_Howard_June_2018.jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Actors/Bryce_Dallas_Howard.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Benedict Cumberbatch",
                             Bio = "Benedict Timothy Carlton Cumberbatch CBE (born 19 July 1976) is an English actor.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Benedict_Cumberbatch#/media/File:BCumberbatch_Comic-Con_2019.jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Actors/BCumberbatch.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Elizabeth Olsen",
                             Bio = "Elizabeth Chase Olsen (born February 16, 1989) is an American actress. Born in Sherman Oaks, California, Olsen began acting at age four.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Elizabeth_Olsen#/media/File:Elizabeth_Olsen_by_Gage_Skidmore_2.jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Actors/Elizabeth_Olsen.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Steve Carell",
-                            Bio = "Steven John Carell (/kəˈrɛl/; born August 16, 1962)[1] is an American actor and comedian.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Steve_Carell#/media/File:Steve_Carell_November_2014.jpg"
+                            Bio = "Steven John Carell (born August 16, 1962) is an American actor and comedian.",
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Actors/Steve_Carell.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Pierre Coffin",
-                            Bio = "Pierre-Louis Padang Coffin (born 16 March 1967)[1] is a French animator, voice actor, director, producer, and writer.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Pierre_Coffin#/media/File:Pierre_Coffin_2017.jpg"
+                            Bio = "Pierre-Louis Padang Coffin (born 16 March 1967) is a French animator, voice actor, director, producer, and writer.",
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Actors/Pierre_Coffin.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Robert Pattinson",
-                            Bio = "Robert Douglas Thomas Pattinson[2][3] (born 13 May 1986) is an English actor.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Robert_Pattinson#/media/File:MJK_08789_Robert_Pattinson_(Damsel,_Berlinale_2018)_(cropped).jpg"
+                            Bio = "Robert Douglas Thomas Pattinson(born 13 May 1986) is an English actor.",
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Actors/Robert_Pattinson.jpg"
                         },
                         new Actor()
                         {
                             FullName = "Zoë Kravitz",
-                            Bio = "Zoë Isabella Kravitz (born December 1, 1988[1]) is an American actress, singer, and model.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Zo%C3%AB_Kravitz#/media/File:Zoe_Kravitz_2020_dvna_studio.jpg"
+                            Bio = "Zoë Isabella Kravitz (born December 1, 1988) is an American actress, singer, and model.",
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Actors/Zoe_Kravitz.jpg"
                         },
 
                     });
