@@ -26,31 +26,31 @@ namespace JBU_Cinemas.Data
                         new Cinema()
                         {
                             CinemaName = "Odeon Cinemas",
-                            LogoURL = "https://en.wikipedia.org/wiki/Odeon_Cinemas#/media/File:Leicester_Square_Odeon.jpg",
+                            LogoURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Cinemas/Leicester_Square_Odeon.jpg",
                             Description = "Odeon, stylised as ODEON, is a cinema brand name operating in the United Kingdom, Ireland and Norway."
                         },
                         new Cinema()
                         {
                             CinemaName = "UCI Cinemas",
-                            LogoURL = "https://en.wikipedia.org/wiki/UCI_Cinemas#/media/File:Uci_kinowelt_logo.png",
+                            LogoURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Cinemas/Uci_kinowelt_logo.png",
                             Description = "UCI Cinemas (United Cinemas International) is a brand of cinema, currently operating in Germany, Italy, Portugal, and Brazil, which has been owned since 2004 by Odeon Cinemas Group."
                         },
                         new Cinema()
                         {
                             CinemaName = "Ritzy Cinema",
-                            LogoURL = "https://en.wikipedia.org/wiki/Ritzy_Cinema#/media/File:RitzyCinemaBrixton.jpg",
+                            LogoURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Cinemas/RitzyCinemaBrixton.jpg",
                             Description = "The Ritzy is a cinema in Brixton, London, England. It is a Grade II listed building.[1] It is managed by Picturehouse Cinemas, who were bought by Cineworld in 2012."
                         },
                         new Cinema()
                         {
                             CinemaName = "The Screen on the Green",
-                            LogoURL = "https://en.wikipedia.org/wiki/The_Screen_on_the_Green#/media/File:Screen_on_the_green_1.jpg",
+                            LogoURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Cinemas/Screen_on_the_green.jpg",
                             Description = "The Screen on the Green is a single-screen cinema facing Islington Green in the London Borough of Islington, London. The current building was opened in 1913 and it is one of the oldest continuously running cinemas in the UK."
                         },
                         new Cinema()
                         {
                             CinemaName = "Prince Charles Cinema",
-                            LogoURL = "https://en.wikipedia.org/wiki/Prince_Charles_Cinema#/media/File:Prince_Charles_Cinema.jpg",
+                            LogoURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Cinemas/Prince_Charles_Cinema.jpg",
                             Description = "The Prince Charles Cinema (PCC) is a repertory cinema located in Leicester Place, 50 yards north of Leicester Square in the West End of London."
                         },
                    });
