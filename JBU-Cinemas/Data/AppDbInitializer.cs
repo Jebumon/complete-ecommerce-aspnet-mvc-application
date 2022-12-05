@@ -140,55 +140,55 @@ namespace JBU_Cinemas.Data
                         { 
                             ProducerName = "Jerry Bruckheimer",
                             Bio = "Jerome Leon Bruckheimer (born September 21, 1943)[2][3] is an American film and television producer.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Jerry_Bruckheimer#/media/File:JerryBruckheimerHWOFJune2013.jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Jerry_Bruckheimer.jpg"
                         },
                         new Producer()
                         {
                             ProducerName = "Tom Cruise",
                             Bio = "Thomas Cruise Mapother IV (born July 3, 1962), known professionally as Tom Cruise, is an American actor and producer. ",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Tom_Cruise#/media/File:Tom_Cruise_by_Gage_Skidmore_2.jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Tom_Cruise.jpg"
                         },
                         new Producer()
                         {
                             ProducerName = "Frank Marshall",
                             Bio = "Frank Wilton Marshall (born September 13, 1946) is an American film producer and director.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Frank_Marshall_(filmmaker)#/media/File:Frank_Marshall_Deauville_2012.jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Frank_Marshall.jpg"
                         },
                         new Producer()
                         {
                             ProducerName = "Kevin Feige",
                             Bio = "Kevin Feige (born June 2, 1973) is an American film and television producer who has been the president of Marvel Studios and the primary producer of the Marvel Cinematic Universe franchise since 2007.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Kevin_Feige#/media/File:Kevin_Feige_(48462887397)_(cropped).jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Kevin_Feige.jpg"
                         },
                         new Producer()
                         {
                             ProducerName = "Chris Meledandri",
                             Bio = "Christopher Meledandri (born May 15, 1959) is an American film producer and founder and CEO of Illumination. ",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Chris_Meledandri#/media/File:Chris_Meledandri_at_the_2018_Fast_Company_Innovation_Festival_1.jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Chris_Meledandri.jpg"
                         },
                         new Producer()
                         {
                             ProducerName = "Janet Healy",
                             Bio = "Janet Healy is a film producer whose films include Illumination's Despicable Me animated series and other animated films by the studio.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Janet_Healy#/media/File:Janet_Healy_2015.jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Janet_Healy.jpg"
                         },
                         new Producer()
                         {
                             ProducerName = "Chris Renaud",
                             Bio = "Chris Renaud (born December 1966) is an American film producer, director, illustrator, designer, animator, and voice actor.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Chris_Renaud#/media/File:Chris_Renaud.jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Chris_Renaud.jpg"
                         },
                         new Producer()
                         {
                             ProducerName = "Dylan Clark",
                             Bio = "Dylan Clark is known for Rise of the Planet of the Apes (2011), Dawn of the Planet of the Apes (2014) and Oblivion (2013).",
-                            ProfilePictureURL = "https://planetoftheapes.fandom.com/wiki/Dylan_Clark?file=Dylan_Clark.jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Dylan_Clark.jpg"
                         },
                         new Producer()
                         {
                             ProducerName = "Matt Reeves",
                             Bio = "Matt Reeves (born April 27, 1966) is an American film director, producer and screenwriter.",
-                            ProfilePictureURL = "https://en.wikipedia.org/wiki/Matt_Reeves#/media/File:Matt_Reeves_(13948765595)_(cropped).jpg"
+                            ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Matt_Reeves.jpg"
                         },
 
                     });
@@ -204,7 +204,7 @@ namespace JBU_Cinemas.Data
                             Title = "Top Gun: Maverick",
                             Description = "Top Gun: Maverick is a 2022 American action drama film[5] directed by Joseph Kosinski. It is the sequel to Top Gun (1986) and the second installment in the Top Gun film series.",
                             Price = 35.5,
-                            ImageURL = "https://en.wikipedia.org/wiki/Top_Gun:_Maverick#/media/File:Top_Gun_Maverick_Poster.jpg",
+                            ImageURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Movies/Top_Gun_Maverick_Poster.jpg",
                             StartDate = DateTime.Now.AddDays(3),
                             EndDate = DateTime.Now.AddDays(20),
                             CinemaId = 1,
@@ -216,7 +216,7 @@ namespace JBU_Cinemas.Data
                             Title = "Jurassic World Dominion",
                             Description = "Jurassic World Dominion is a 2022 American science fiction action film directed by Colin Trevorrow, who co-wrote the screenplay with Emily Carmichael from a story by Derek Connolly and Trevorrow. ",
                             Price = 35.5,
-                            ImageURL = "https://en.wikipedia.org/wiki/Jurassic_World_Dominion#/media/File:JurassicWorldDominion_Poster.jpeg",
+                            ImageURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Movies/JurassicWorldDominion_Poster.jpeg",
                             StartDate = DateTime.Now.AddDays(1),
                             EndDate = DateTime.Now.AddDays(30),
                             CinemaId = 2,
@@ -228,7 +228,7 @@ namespace JBU_Cinemas.Data
                             Title = "Doctor Strange in the Multiverse of Madness",
                             Description = "Doctor Strange in the Multiverse of Madness is a 2022 American superhero film based on Marvel Comics featuring the character Doctor Strange.",
                             Price = 35.5,
-                            ImageURL = "https://en.wikipedia.org/wiki/Doctor_Strange_in_the_Multiverse_of_Madness#/media/File:Doctor_Strange_in_the_Multiverse_of_Madness_poster.jpg",
+                            ImageURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Movies/Doctor_Strange_in_the_Multiverse_of_Madness_poster.jpg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(10),
                             CinemaId = 3,
@@ -240,7 +240,7 @@ namespace JBU_Cinemas.Data
                             Title = "Minions: The Rise of Gru",
                             Description = "Minions: The Rise of Gru (also known as Minions 2) is a 2022 American computer-animated comedy film produced by Illumination and distributed by Universal Pictures.",
                             Price = 35.5,
-                            ImageURL = "https://en.wikipedia.org/wiki/Minions:_The_Rise_of_Gru#/media/File:Minions_The_Rise_of_Gru_poster.jpg",
+                            ImageURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Movies/Minions_The_Rise_of_Gru_poster.jpg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(12),
                             CinemaId = 4,
@@ -252,7 +252,7 @@ namespace JBU_Cinemas.Data
                             Title = "The Batman",
                             Description = "The Batman is a 2022 American superhero film based on the DC Comics character Batman. Produced by DC Films, 6th & Idaho, and Dylan Clark Productions, and distributed by Warner Bros.",
                             Price = 35.5,
-                            ImageURL = "https://en.wikipedia.org/wiki/The_Batman_(film)#/media/File:The_Batman_(film)_poster.jpg",
+                            ImageURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Movies/The_Batman_poster.jpg",
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(8),
                             CinemaId = 5,
