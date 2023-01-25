@@ -1,6 +1,6 @@
-﻿@model IEnumerable<Actor>
+﻿@model IEnumerable<Producer>
 @{
-    ViewData["Title"] = "List of Actors";
+    ViewData["Title"] = "List of Producers";
 }
 
 <div class="row"> 
@@ -9,7 +9,7 @@
             <thead>
                 <tr class="text-center">
                     <th>@Html.DisplayNameFor(model => model.ProfilePictureURL)</th>
-                    <th>@Html.DisplayNameFor(model => model.FullName)</th>
+                    <th>@Html.DisplayNameFor(model => model.ProducerName)</th>
                     <th>@Html.DisplayNameFor(model => model.Bio)</th>
                     <th>Actions</th>
                 </tr>
@@ -23,11 +23,11 @@
                                 <style> img {border-radius: 8px;} </style>
                             </head>
                                 <body>
-                                    <img src="@item.ProfilePictureURL" alt="@item.FullName" style="width:150px; height:200px">
+                                    <img src="@item.ProfilePictureURL" alt="@item.ProducerName" style="width:150px; height:200px">
                                 </body>
                         </td>
                         <td class="align-middle">
-                            @Html.DisplayFor(modelItem=> item.FullName)
+                            @Html.DisplayFor(modelItem=> item.ProducerName)
                         </td>
                         <td class="align-middle">
                             @Html.DisplayFor(modelitem => item.Bio)
