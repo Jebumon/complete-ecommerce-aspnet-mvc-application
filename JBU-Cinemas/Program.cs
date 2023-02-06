@@ -5,12 +5,18 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
 using JBU_Cinemas.Data;
+using JBU_Cinemas.Data.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
+
+// Service Configuration
+builder.Services.AddScoped<IActorsService, ActorsService>();
+
 builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
