@@ -1,5 +1,6 @@
 ﻿using JBU_Cinemas.Data;
 using JBU_Cinemas.Data.Services;
+using JBU_Cinemas.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JBU_Cinemas.Controllers
@@ -21,6 +22,17 @@ namespace JBU_Cinemas.Controllers
         public IActionResult Create() 
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind ("FullName,ProfilePictureURL,Bio")]Actor actor) 
+        {
+            if (!ModelState.IsValid) 
+            {
+                return View(actor);
+            }
+            _service.Add(actor);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
