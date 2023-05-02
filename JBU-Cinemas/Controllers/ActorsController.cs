@@ -40,7 +40,7 @@ namespace JBU_Cinemas.Controllers
         public async Task<IActionResult> Details(int id) 
         {
             var actorDetails = await _service.GetByIDAsync(id);
-            if (actorDetails == null) return View("Empty");
+            if (actorDetails == null) return View("NotFound");
             return View(actorDetails);
         }
 
