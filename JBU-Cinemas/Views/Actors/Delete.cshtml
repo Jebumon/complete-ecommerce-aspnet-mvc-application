@@ -1,0 +1,61 @@
+﻿@model Actor
+
+@{
+    ViewData["Title"] = "Delete actor";
+}
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1> Delete confirmation for @Model.FullName</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+               
+                   
+                    <div class="form-group text-center">
+                    <td class="align-middle">
+                            <head>
+                                <style> img {border-radius: 8px;stroke-width:3px;} </style>
+                            </head>
+                                <body>
+                                    <img  id="ProfilePicturePreview" style="width:150px; height:200px">
+                                </body>
+                        </td>
+                    
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="ProfilePictureURL" style="padding: 5px 5px 5px 5px;" class="control-label"></label>
+                    <input asp-for="ProfilePictureURL" class="form-control" readonly/>
+                    <span asp-validation-for="ProfilePictureURL" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FullName" style="padding: 5px 5px 5px 5px;" class="control-label"></label>
+                    <input asp-for="FullName" class="form-control" readonly/>
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+                <div  class="form-group">
+                    <label asp-for="Bio" style="padding: 5px 5px 5px 5px;" class="control-label"></label>
+                    <input asp-for="Bio" class="form-control" readonly/>
+                    <span asp-validation-for="Bio" class="text-danger"></span>
+                </div>
+                <div style="padding: 10px 5px 5px 5px;" class="form-group" >
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="ActorId"/>
+                        <input type="submit" value="Confirm" class="btn btn-danger float-end"/>
+                    </form>
+                    <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+
+        $(document).ready(function() {
+            var output = document.getElementById('ProfilePicturePreview');
+            output.src = $("#ProfilePictureURL").val();
+        })
+    </script>
+}

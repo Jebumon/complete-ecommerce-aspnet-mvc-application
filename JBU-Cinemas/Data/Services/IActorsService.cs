@@ -7,7 +7,7 @@ namespace JBU_Cinemas.Data.Services
         Task<IEnumerable<Actor>> GetAllAsync();
         Task<Actor> GetByIDAsync(int actorId);
         Task AddAsync(Actor actor);
-        Task<Actor> UpdateAsync(int id, Actor newActor);
-        void Delete(int id);
+        Task<Actor> UpdateAsync(int actorId, Actor newActor);
+        Task  DeleteAsync(int actorId);
     }
 }

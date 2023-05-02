@@ -44,7 +44,7 @@ namespace JBU_Cinemas.Controllers
             return View(actorDetails);
         }
 
-        //Get: Actors/Create
+        //Get: Actors/Edit
         public async Task<IActionResult> Edit(int actorId)
         {
             var actorDetails = await _service.GetByIDAsync(actorId);
@@ -60,6 +60,24 @@ namespace JBU_Cinemas.Controllers
                 return View(actor);
             }
             await _service.UpdateAsync(actorId, actor);
+            return RedirectToAction(nameof(Index));
+        }
+
+        //Get: Actors/Delete
+        public async Task<IActionResult> Delete(int actorId)
+        {
+            var actorDetails = await _service.GetByIDAsync(actorId);
+            if (actorDetails == null) return View("NotFound");
+            return View(actorDetails);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int actorId)
+        {
+            var actorDetails = await _service.GetByIDAsync(actorId);
+            if (actorDetails == null) return View("NotFound");
+            await _service.DeleteAsync(actorId);
+
             return RedirectToAction(nameof(Index));
         }
     }
