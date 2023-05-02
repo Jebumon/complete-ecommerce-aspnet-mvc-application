@@ -13,12 +13,14 @@ namespace JBU_Cinemas.Controllers
         {
             _service = service;
         }
-
+        
         public async Task<IActionResult> Index()
         {
-            var data = await _service.GetAll();
+            var data = await _service.GetAllAsync();
             return View(data);
         }
+
+        //Get: Actors/Create
         public IActionResult Create() 
         {
             return View();
@@ -31,7 +33,33 @@ namespace JBU_Cinemas.Controllers
             {
                 return View(actor);
             }
-            _service.Add(actor);
+            await _service.AddAsync(actor);
+            return RedirectToAction(nameof(Index));
+        }
+        //Get: Actors/details/1
+        public async Task<IActionResult> Details(int id) 
+        {
+            var actorDetails = await _service.GetByIDAsync(id);
+            if (actorDetails == null) return View("Empty");
+            return View(actorDetails);
+        }
+
+        //Get: Actors/Create
+        public async Task<IActionResult> Edit(int actorId)
+        {
+            var actorDetails = await _service.GetByIDAsync(actorId);
+            if (actorDetails == null) return View("NotFound");
+            return View(actorDetails);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int actorId,[Bind("ActorId,FullName,ProfilePictureURL,Bio")] Actor actor)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(actor);
+            }
+            await _service.UpdateAsync(actorId, actor);
             return RedirectToAction(nameof(Index));
         }
     }

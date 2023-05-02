@@ -11,10 +11,10 @@ namespace JBU_Cinemas.Data.Services
             _context = context;
         }
 
-        public void Add(Actor actor)
+        public async Task AddAsync(Actor actor)
         {
-            _context.Actors.Add(actor);
-            _context.SaveChanges();
+            await _context.Actors.AddAsync(actor);
+            await _context.SaveChangesAsync();
         }
 
         public void Delete(int id)
@@ -22,20 +22,23 @@ namespace JBU_Cinemas.Data.Services
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<Actor>> GetAll()
+        public async Task<IEnumerable<Actor>> GetAllAsync()
         {
             var result = await _context.Actors.ToListAsync();
             return result;
         }
 
-        public Actor GetByID(int id)
+        public async Task<Actor> GetByIDAsync(int actorId)
         {
-            throw new NotImplementedException();
+            var result = await _context.Actors.FirstOrDefaultAsync(n=>n.ActorId == actorId);
+            return result;
         }
 
-        public Actor Update(int id, Actor newActor)
+        public async Task<Actor> UpdateAsync(int id, Actor newActor)
         {
-            throw new NotImplementedException();
+            _context.Update(newActor);
+            await _context.SaveChangesAsync();
+            return newActor;
         }
     }
 }
