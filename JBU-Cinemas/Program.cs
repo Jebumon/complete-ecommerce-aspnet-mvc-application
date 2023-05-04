@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using JBU_Cinemas.Data;
 using JBU_Cinemas.Data.Services;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -28,6 +29,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -41,5 +44,6 @@ app.MapControllerRoute(
 
 //Seed database
 //AppDbInitializer.Seed(app);
+
 
 app.Run();
