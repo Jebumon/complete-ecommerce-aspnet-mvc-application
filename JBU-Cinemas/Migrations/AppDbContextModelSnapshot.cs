@@ -24,11 +24,11 @@ namespace JBUCinemas.Migrations
 
             modelBuilder.Entity("JBU_Cinemas.Models.Actor", b =>
                 {
-                    b.Property<int>("ActorId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ActorId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Bio")
                         .IsRequired()
@@ -42,20 +42,20 @@ namespace JBUCinemas.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ActorId");
+                    b.HasKey("Id");
 
                     b.ToTable("Actors");
                 });
 
             modelBuilder.Entity("JBU_Cinemas.Models.Actor_Movie", b =>
                 {
-                    b.Property<int>("ActorId")
+                    b.Property<int>("Id")
                         .HasColumnType("int");
 
                     b.Property<int>("MovieId")
                         .HasColumnType("int");
 
-                    b.HasKey("ActorId", "MovieId");
+                    b.HasKey("Id", "MovieId");
 
                     b.HasIndex("MovieId");
 
@@ -163,7 +163,7 @@ namespace JBUCinemas.Migrations
                 {
                     b.HasOne("JBU_Cinemas.Models.Actor", "Actor")
                         .WithMany("Actors_Movies")
-                        .HasForeignKey("ActorId")
+                        .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

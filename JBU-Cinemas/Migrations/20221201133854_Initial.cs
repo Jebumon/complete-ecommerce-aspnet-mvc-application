@@ -103,7 +103,7 @@ namespace JBUCinemas.Migrations
                         name: "FK_Actors_Movies_Actors_ActorId",
                         column: x => x.ActorId,
                         principalTable: "Actors",
-                        principalColumn: "ActorId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Actors_Movies_Movies_MovieId",

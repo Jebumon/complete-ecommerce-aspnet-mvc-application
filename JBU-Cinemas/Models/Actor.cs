@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using JBU_Cinemas.Data.Base;
+using System.ComponentModel.DataAnnotations;
 
 namespace JBU_Cinemas.Models
 {
-    public class Actor
+    public class Actor: IEntityBase
     {
         [Key]
-        public int ActorId { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Profile Picture")]
         [Required(ErrorMessage = "Profile Picture is required")]
