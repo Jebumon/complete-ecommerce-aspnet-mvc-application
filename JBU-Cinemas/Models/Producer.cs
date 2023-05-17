@@ -1,20 +1,26 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using JBU_Cinemas.Data.Base;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace JBU_Cinemas.Models
 {
-    public class Producer
+    public class Producer: IEntityBase
     {
         [Key]
-        public int ProducerId { get; set; }
+        public int Id { get; set; }
         [Display(Name = "Full Name")]
-        public string ProducerName { get; set; }
+        [Required(ErrorMessage ="Full Name is required")]
+        [StringLength(50, MinimumLength =3, ErrorMessage ="Full Name must be between 3 and 50")]
+        public string? FullName { get; set; }
         [Display(Name = "Profile Picture")]
-        public string ProfilePictureURL { get; set; }
+        [Required(ErrorMessage ="Profile picture is required")]
+        public string? ProfilePictureURL { get; set; }
         [Display(Name = "Biography")]
-        public string Bio { get; set; }
+        [Required(ErrorMessage ="Biography is required")]
+        public string? Bio { get; set; }
 
         //Relationships
-        public List<Movie> Movies { get; set; }
+        public List<Movie>? Movies { get; set; }
 
     }
 }

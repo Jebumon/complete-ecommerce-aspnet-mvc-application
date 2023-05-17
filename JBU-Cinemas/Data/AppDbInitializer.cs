@@ -138,55 +138,55 @@ namespace JBU_Cinemas.Data
                     {
                         new Producer() 
                         { 
-                            ProducerName = "Jerry Bruckheimer",
+                            FullName = "Jerry Bruckheimer",
                             Bio = "Jerome Leon Bruckheimer (born September 21, 1943)[2][3] is an American film and television producer.",
                             ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Jerry_Bruckheimer.jpg"
                         },
                         new Producer()
                         {
-                            ProducerName = "Tom Cruise",
+                            FullName = "Tom Cruise",
                             Bio = "Thomas Cruise Mapother IV (born July 3, 1962), known professionally as Tom Cruise, is an American actor and producer. ",
                             ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Tom_Cruise.jpg"
                         },
                         new Producer()
                         {
-                            ProducerName = "Frank Marshall",
+                            FullName = "Frank Marshall",
                             Bio = "Frank Wilton Marshall (born September 13, 1946) is an American film producer and director.",
                             ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Frank_Marshall.jpg"
                         },
                         new Producer()
                         {
-                            ProducerName = "Kevin Feige",
+                            FullName = "Kevin Feige",
                             Bio = "Kevin Feige (born June 2, 1973) is an American film and television producer who has been the president of Marvel Studios and the primary producer of the Marvel Cinematic Universe franchise since 2007.",
                             ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Kevin_Feige.jpg"
                         },
                         new Producer()
                         {
-                            ProducerName = "Chris Meledandri",
+                            FullName = "Chris Meledandri",
                             Bio = "Christopher Meledandri (born May 15, 1959) is an American film producer and founder and CEO of Illumination. ",
                             ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Chris_Meledandri.jpg"
                         },
                         new Producer()
                         {
-                            ProducerName = "Janet Healy",
+                            FullName = "Janet Healy",
                             Bio = "Janet Healy is a film producer whose films include Illumination's Despicable Me animated series and other animated films by the studio.",
                             ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Janet_Healy.jpg"
                         },
                         new Producer()
                         {
-                            ProducerName = "Chris Renaud",
+                            FullName = "Chris Renaud",
                             Bio = "Chris Renaud (born December 1966) is an American film producer, director, illustrator, designer, animator, and voice actor.",
                             ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Chris_Renaud.jpg"
                         },
                         new Producer()
                         {
-                            ProducerName = "Dylan Clark",
+                            FullName = "Dylan Clark",
                             Bio = "Dylan Clark is known for Rise of the Planet of the Apes (2011), Dawn of the Planet of the Apes (2014) and Oblivion (2013).",
                             ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Dylan_Clark.jpg"
                         },
                         new Producer()
                         {
-                            ProducerName = "Matt Reeves",
+                            FullName = "Matt Reeves",
                             Bio = "Matt Reeves (born April 27, 1966) is an American film director, producer and screenwriter.",
                             ProfilePictureURL = "https://github.com/Jebumon/complete-ecommerce-aspnet-mvc-application/blob/master/Images-For-Db-Initialize/Producers/Matt_Reeves.jpg"
                         },
