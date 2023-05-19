@@ -1,10 +1,12 @@
-﻿using JBU_Cinemas.Data.Enums;
+﻿using JBU_Cinemas.Data.Base;
+using JBU_Cinemas.Data.Enums;
+using JBU_Cinemas.Data.Services;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JBU_Cinemas.Models
 {
-    public class Movie
+    public class Movie : IEntityBase
     {
         [Key]
         public int Id { get; set; }
