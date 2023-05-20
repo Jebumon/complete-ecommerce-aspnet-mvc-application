@@ -1142,16 +1142,16 @@
   const CLASS_NAME_CAROUSEL = 'carousel';
   const CLASS_NAME_ACTIVE$2 = 'active';
   const CLASS_NAME_SLIDE = 'slide';
-  const CLASS_NAME_END = 'carousel-item-end';
-  const CLASS_NAME_START = 'carousel-item-start';
-  const CLASS_NAME_NEXT = 'carousel-item-next';
-  const CLASS_NAME_PREV = 'carousel-item-prev';
+  const CLASS_NAME_END = 'carousel-Model-end';
+  const CLASS_NAME_START = 'carousel-Model-start';
+  const CLASS_NAME_NEXT = 'carousel-Model-next';
+  const CLASS_NAME_PREV = 'carousel-Model-prev';
   const CLASS_NAME_POINTER_EVENT = 'pointer-event';
   const SELECTOR_ACTIVE$1 = '.active';
-  const SELECTOR_ACTIVE_ITEM = '.active.carousel-item';
-  const SELECTOR_ITEM = '.carousel-item';
-  const SELECTOR_ITEM_IMG = '.carousel-item img';
-  const SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev';
+  const SELECTOR_ACTIVE_Model = '.active.carousel-Model';
+  const SELECTOR_Model = '.carousel-Model';
+  const SELECTOR_Model_IMG = '.carousel-Model img';
+  const SELECTOR_NEXT_PREV = '.carousel-Model-next, .carousel-Model-prev';
   const SELECTOR_INDICATORS = '.carousel-indicators';
   const SELECTOR_INDICATOR = '[data-bs-target]';
   const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
@@ -1167,7 +1167,7 @@
   class Carousel extends BaseComponent {
     constructor(element, config) {
       super(element);
-      this._items = null;
+      this._Models = null;
       this._interval = null;
       this._activeElement = null;
       this._isPaused = false;
@@ -1241,11 +1241,11 @@
     }
 
     to(index) {
-      this._activeElement = SelectorEngine.findOne(SELECTOR_ACTIVE_ITEM, this._element);
+      this._activeElement = SelectorEngine.findOne(SELECTOR_ACTIVE_Model, this._element);
 
-      const activeIndex = this._getItemIndex(this._activeElement);
+      const activeIndex = this._getModelIndex(this._activeElement);
 
-      if (index > this._items.length - 1 || index < 0) {
+      if (index > this._Models.length - 1 || index < 0) {
         return;
       }
 
@@ -1262,7 +1262,7 @@
 
       const order = index > activeIndex ? ORDER_NEXT : ORDER_PREV;
 
-      this._slide(order, this._items[index]);
+      this._slide(order, this._Models[index]);
     } // Private
 
 
@@ -1346,8 +1346,8 @@
         }
       };
 
-      SelectorEngine.find(SELECTOR_ITEM_IMG, this._element).forEach(itemImg => {
-        EventHandler.on(itemImg, EVENT_DRAG_START, e => e.preventDefault());
+      SelectorEngine.find(SELECTOR_Model_IMG, this._element).forEach(ModelImg => {
+        EventHandler.on(ModelImg, EVENT_DRAG_START, e => e.preventDefault());
       });
 
       if (this._pointerEvent) {
@@ -1376,20 +1376,20 @@
       }
     }
 
-    _getItemIndex(element) {
-      this._items = element && element.parentNode ? SelectorEngine.find(SELECTOR_ITEM, element.parentNode) : [];
-      return this._items.indexOf(element);
+    _getModelIndex(element) {
+      this._Models = element && element.parentNode ? SelectorEngine.find(SELECTOR_Model, element.parentNode) : [];
+      return this._Models.indexOf(element);
     }
 
-    _getItemByOrder(order, activeElement) {
+    _getModelByOrder(order, activeElement) {
       const isNext = order === ORDER_NEXT;
-      return getNextActiveElement(this._items, activeElement, isNext, this._config.wrap);
+      return getNextActiveElement(this._Models, activeElement, isNext, this._config.wrap);
     }
 
     _triggerSlideEvent(relatedTarget, eventDirectionName) {
-      const targetIndex = this._getItemIndex(relatedTarget);
+      const targetIndex = this._getModelIndex(relatedTarget);
 
-      const fromIndex = this._getItemIndex(SelectorEngine.findOne(SELECTOR_ACTIVE_ITEM, this._element));
+      const fromIndex = this._getModelIndex(SelectorEngine.findOne(SELECTOR_ACTIVE_Model, this._element));
 
       return EventHandler.trigger(this._element, EVENT_SLIDE, {
         relatedTarget,
@@ -1407,7 +1407,7 @@
         const indicators = SelectorEngine.find(SELECTOR_INDICATOR, this._indicatorsElement);
 
         for (let i = 0; i < indicators.length; i++) {
-          if (Number.parseInt(indicators[i].getAttribute('data-bs-slide-to'), 10) === this._getItemIndex(element)) {
+          if (Number.parseInt(indicators[i].getAttribute('data-bs-slide-to'), 10) === this._getModelIndex(element)) {
             indicators[i].classList.add(CLASS_NAME_ACTIVE$2);
             indicators[i].setAttribute('aria-current', 'true');
             break;
@@ -1417,7 +1417,7 @@
     }
 
     _updateInterval() {
-      const element = this._activeElement || SelectorEngine.findOne(SELECTOR_ACTIVE_ITEM, this._element);
+      const element = this._activeElement || SelectorEngine.findOne(SELECTOR_ACTIVE_Model, this._element);
 
       if (!element) {
         return;
@@ -1436,13 +1436,13 @@
     _slide(directionOrOrder, element) {
       const order = this._directionToOrder(directionOrOrder);
 
-      const activeElement = SelectorEngine.findOne(SELECTOR_ACTIVE_ITEM, this._element);
+      const activeElement = SelectorEngine.findOne(SELECTOR_ACTIVE_Model, this._element);
 
-      const activeElementIndex = this._getItemIndex(activeElement);
+      const activeElementIndex = this._getModelIndex(activeElement);
 
-      const nextElement = element || this._getItemByOrder(order, activeElement);
+      const nextElement = element || this._getModelByOrder(order, activeElement);
 
-      const nextElementIndex = this._getItemIndex(nextElement);
+      const nextElementIndex = this._getModelIndex(nextElement);
 
       const isCycling = Boolean(this._interval);
       const isNext = order === ORDER_NEXT;
@@ -1983,7 +1983,7 @@
   const SELECTOR_DATA_TOGGLE$3 = '[data-bs-toggle="dropdown"]';
   const SELECTOR_MENU = '.dropdown-menu';
   const SELECTOR_NAVBAR_NAV = '.navbar-nav';
-  const SELECTOR_VISIBLE_ITEMS = '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)';
+  const SELECTOR_VISIBLE_ModelS = '.dropdown-menu .dropdown-Model:not(.disabled):not(:disabled)';
   const PLACEMENT_TOP = isRTL() ? 'top-end' : 'top-start';
   const PLACEMENT_TOPEND = isRTL() ? 'top-start' : 'top-end';
   const PLACEMENT_BOTTOM = isRTL() ? 'bottom-end' : 'bottom-start';
@@ -2253,19 +2253,19 @@
       };
     }
 
-    _selectMenuItem({
+    _selectMenuModel({
       key,
       target
     }) {
-      const items = SelectorEngine.find(SELECTOR_VISIBLE_ITEMS, this._menu).filter(isVisible);
+      const Models = SelectorEngine.find(SELECTOR_VISIBLE_ModelS, this._menu).filter(isVisible);
 
-      if (!items.length) {
+      if (!Models.length) {
         return;
-      } // if target isn't included in items (e.g. when expanding the dropdown)
-      // allow cycling to get the last item in case key equals ARROW_UP_KEY
+      } // if target isn't included in Models (e.g. when expanding the dropdown)
+      // allow cycling to get the last Model in case key equals ARROW_UP_KEY
 
 
-      getNextActiveElement(items, target, key === ARROW_DOWN_KEY, !items.includes(target)).focus();
+      getNextActiveElement(Models, target, key === ARROW_DOWN_KEY, !Models.includes(target)).focus();
     } // Static
 
 
@@ -2371,7 +2371,7 @@
           instance.show();
         }
 
-        instance._selectMenuItem(event);
+        instance._selectMenuModel(event);
 
         return;
       }
@@ -3420,7 +3420,7 @@
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
-  const uriAttrs = new Set(['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href']);
+  const uriAttrs = new Set(['background', 'cite', 'href', 'Modeltype', 'longdesc', 'poster', 'src', 'xlink:href']);
   const ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i;
   /**
    * A pattern that recognizes a commonly useful subset of URLs that are safe.
@@ -4365,14 +4365,14 @@
   const EVENT_ACTIVATE = `activate${EVENT_KEY$2}`;
   const EVENT_SCROLL = `scroll${EVENT_KEY$2}`;
   const EVENT_LOAD_DATA_API = `load${EVENT_KEY$2}${DATA_API_KEY$1}`;
-  const CLASS_NAME_DROPDOWN_ITEM = 'dropdown-item';
+  const CLASS_NAME_DROPDOWN_Model = 'dropdown-Model';
   const CLASS_NAME_ACTIVE$1 = 'active';
   const SELECTOR_DATA_SPY = '[data-bs-spy="scroll"]';
   const SELECTOR_NAV_LIST_GROUP$1 = '.nav, .list-group';
   const SELECTOR_NAV_LINKS = '.nav-link';
-  const SELECTOR_NAV_ITEMS = '.nav-item';
-  const SELECTOR_LIST_ITEMS = '.list-group-item';
-  const SELECTOR_LINK_ITEMS = `${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}, .${CLASS_NAME_DROPDOWN_ITEM}`;
+  const SELECTOR_NAV_ModelS = '.nav-Model';
+  const SELECTOR_LIST_ModelS = '.list-group-Model';
+  const SELECTOR_LINK_ModelS = `${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ModelS}, .${CLASS_NAME_DROPDOWN_Model}`;
   const SELECTOR_DROPDOWN$1 = '.dropdown';
   const SELECTOR_DROPDOWN_TOGGLE$1 = '.dropdown-toggle';
   const METHOD_OFFSET = 'offset';
@@ -4415,7 +4415,7 @@
       this._offsets = [];
       this._targets = [];
       this._scrollHeight = this._getScrollHeight();
-      const targets = SelectorEngine.find(SELECTOR_LINK_ITEMS, this._config.target);
+      const targets = SelectorEngine.find(SELECTOR_LINK_ModelS, this._config.target);
       targets.map(element => {
         const targetSelector = getSelectorFromElement(element);
         const target = targetSelector ? SelectorEngine.findOne(targetSelector) : null;
@@ -4429,10 +4429,10 @@
         }
 
         return null;
-      }).filter(item => item).sort((a, b) => a[0] - b[0]).forEach(item => {
-        this._offsets.push(item[0]);
+      }).filter(Model => Model).sort((a, b) => a[0] - b[0]).forEach(Model => {
+        this._offsets.push(Model[0]);
 
-        this._targets.push(item[1]);
+        this._targets.push(Model[1]);
       });
     }
 
@@ -4507,20 +4507,20 @@
 
       this._clear();
 
-      const queries = SELECTOR_LINK_ITEMS.split(',').map(selector => `${selector}[data-bs-target="${target}"],${selector}[href="${target}"]`);
+      const queries = SELECTOR_LINK_ModelS.split(',').map(selector => `${selector}[data-bs-target="${target}"],${selector}[href="${target}"]`);
       const link = SelectorEngine.findOne(queries.join(','), this._config.target);
       link.classList.add(CLASS_NAME_ACTIVE$1);
 
-      if (link.classList.contains(CLASS_NAME_DROPDOWN_ITEM)) {
+      if (link.classList.contains(CLASS_NAME_DROPDOWN_Model)) {
         SelectorEngine.findOne(SELECTOR_DROPDOWN_TOGGLE$1, link.closest(SELECTOR_DROPDOWN$1)).classList.add(CLASS_NAME_ACTIVE$1);
       } else {
         SelectorEngine.parents(link, SELECTOR_NAV_LIST_GROUP$1).forEach(listGroup => {
           // Set triggered links parents as active
           // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
-          SelectorEngine.prev(listGroup, `${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}`).forEach(item => item.classList.add(CLASS_NAME_ACTIVE$1)); // Handle special case when .nav-link is inside .nav-item
+          SelectorEngine.prev(listGroup, `${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ModelS}`).forEach(Model => Model.classList.add(CLASS_NAME_ACTIVE$1)); // Handle special case when .nav-link is inside .nav-Model
 
-          SelectorEngine.prev(listGroup, SELECTOR_NAV_ITEMS).forEach(navItem => {
-            SelectorEngine.children(navItem, SELECTOR_NAV_LINKS).forEach(item => item.classList.add(CLASS_NAME_ACTIVE$1));
+          SelectorEngine.prev(listGroup, SELECTOR_NAV_ModelS).forEach(navModel => {
+            SelectorEngine.children(navModel, SELECTOR_NAV_LINKS).forEach(Model => Model.classList.add(CLASS_NAME_ACTIVE$1));
           });
         });
       }
@@ -4531,7 +4531,7 @@
     }
 
     _clear() {
-      SelectorEngine.find(SELECTOR_LINK_ITEMS, this._config.target).filter(node => node.classList.contains(CLASS_NAME_ACTIVE$1)).forEach(node => node.classList.remove(CLASS_NAME_ACTIVE$1));
+      SelectorEngine.find(SELECTOR_LINK_ModelS, this._config.target).filter(node => node.classList.contains(CLASS_NAME_ACTIVE$1)).forEach(node => node.classList.remove(CLASS_NAME_ACTIVE$1));
     } // Static
 
 
@@ -4627,8 +4627,8 @@
       const listElement = this._element.closest(SELECTOR_NAV_LIST_GROUP);
 
       if (listElement) {
-        const itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? SELECTOR_ACTIVE_UL : SELECTOR_ACTIVE;
-        previous = SelectorEngine.find(itemSelector, listElement);
+        const ModelSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? SELECTOR_ACTIVE_UL : SELECTOR_ACTIVE;
+        previous = SelectorEngine.find(ModelSelector, listElement);
         previous = previous[previous.length - 1];
       }
 

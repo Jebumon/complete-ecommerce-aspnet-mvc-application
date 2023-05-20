@@ -15,7 +15,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model)
+                @foreach (var Model in Model)
                 {
                     <tr>
                         <td class="align-middle">
@@ -23,20 +23,20 @@
                                 <style> img {border-radius: 8px;} </style>
                             </head>
                                 <body>
-                                    <img src="@item.LogoURL" alt="@item.CinemaName" style="width:150px; height:200px">
+                                    <img src="@Model.LogoURL" alt="@Model.CinemaName" style="width:150px; height:200px">
                                 </body>
                         </td>
                         <td class="align-middle">
-                            @Html.DisplayFor(modelItem=> item.CinemaName)
+                            @Html.DisplayFor(modelModel=> Model.CinemaName)
                         </td>
                         <td class="align-middle">
-                            @Html.DisplayFor(modelitem => item.Description)
+                            @Html.DisplayFor(modelModel => Model.Description)
                         </td>
                         <td class="align-middle">
                             <div class="btn-group">
-                                <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i>Edit</a> 
-                                <a class="btn btn-outline-info" asp-action="Details" asp-route-id="@item.Id"><i class="bi bi-eye"></i>Details</a> 
-                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id"><i class="bi bi-trash"></i>Delete</a>
+                                <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@Model.Id"><i class="bi bi-pencil-square"></i>Edit</a> 
+                                <a class="btn btn-outline-info" asp-action="Details" asp-route-id="@Model.Id"><i class="bi bi-eye"></i>Details</a> 
+                                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@Model.Id"><i class="bi bi-trash"></i>Delete</a>
                             </div>
                         </td>
                     </tr>
